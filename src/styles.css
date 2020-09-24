@@ -1,0 +1,77 @@
+body{
+    background-color: #eee !important;
+    font-family: 'Lato', sans-serif !important;
+}
+.header{
+    background: #147abc;
+    padding: 10px;
+    text-align: center;
+}
+.m-b-15{
+    margin-bottom: 15px;
+}
+.detail{
+    float: right;
+    border: 1px solid #007bff;
+    margin-bottom: 10px;
+    padding: 3px 16px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.card-content img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.card{
+    border: none;
+    padding: 15px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+    margin-bottom: 15px;
+}
+input:focus,button:focus{
+    outline: none;
+}
+input{
+    border: none;
+    height: 40px;
+    border-radius: 3px;
+    padding: 0px 10px;
+    position: relative;
+    width: 250px;
+}
+button{
+    border: none;
+    background: none;
+    position: absolute;
+    right: 0px;
+}
+select{
+    border: none;
+    height: 40px;
+    border-radius: 3px;
+    padding: 0px 10px;
+    position: relative;
+    margin-right: 15px !important;
+}
+.search_icon{
+    position: relative;
+}
+.search_icon button{
+    background: #fff;
+    height: 40px;
+}
+.card .center{
+    margin: 0px;
+    padding-left: 20px;
+}
+.card .center p{
+    margin: 0px;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    font-size: 17px;
+}
+.card .center a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,75 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 header ">
+        <form #userform="ngForm" (ngSubmit)="submitform(userform)">
+          <select name="sortname">
+            <option value="sort by Name" (click)="namesort()">sort by Name</option>
+            <option value="sort by Rank">sort by Rank</option>
+          </select>
+          <span class="search_icon">
+            <input type="text" placeholder="Search your name on github" id="uname" name="userName" ngModel>
+        
+            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </span>
+          
+        </form>
+      </div>
+
+
+      <div class="col-sm-12 is-multiline">
+       
+        <div class="row">
+          <div class="col-sm-12" >
+            <h6 class="text-center">Total Results:  </h6>
+          </div>
+          <div class="col-md-8 offset-md-2" *ngFor="let user of mArti">
+            <div class="card m-b-15">
+              <div class="row card-content">
+                <div class="col-md-1">
+                  <img src="{{user.avatar_url}}">
+                </div>
+                <div class="col-md-10 center">
+                  <p>{{user.login}}</p>
+                  Profile URL: <a href="{{user.html_url}}" target="_blank">{{user.html_url}}</a>
+                </div>
+                <div class="col-md-1">
+                  <div (click)="openDetail(userform)" class="detail" form="ngForm" >Details</div>
+                </div>
+                
+               
+
+             
+               
+                  <div *ngIf="opendetails" class="col-sm-12" >
+                    <ul *ngFor="let repo of repodetails; let i = index">
+                      <li>{{i}} - {{repo.html_url}}</li>
+                    </ul>
+                  </div>
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+</body>
+
+</html>
