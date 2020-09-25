@@ -12,7 +12,7 @@ export class GithubapiService {
   }
 
 getUsers(uname: string){
-  return this.http.get(`${this.apiUrl}/search/users?q=${uname}&sort_by=asc(uname):asc&skip=5&per_page=10`);
+  return this.http.get(`${this.apiUrl}/search/users?q=${uname}&sort_by=asc(uname):asc&per_page=10`);
 }
 
 getbyUsername(uname: string){
