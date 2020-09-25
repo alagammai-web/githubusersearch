@@ -10,7 +10,7 @@
       <div class="col-sm-12 header ">
         <form #userform="ngForm" (ngSubmit)="submitform(userform)">
           <select name="sortname">
-            <option value="sort by Name" (click)="namesort()">sort by Name</option>
+            <option value="sort by Name">sort by Name</option>
             <option value="sort by Rank">sort by Rank</option>
           </select>
           <span class="search_icon">
@@ -26,10 +26,12 @@
       <div class="col-sm-12 is-multiline">
        
         <div class="row">
-          <div class="col-sm-12" >
-            <h6 class="text-center">Total Results:  </h6>
+         
+         
+          <div class="col-md-8 offset-md-2">
+            Total Results: <span class="text-center" *ngIf="userlist"> {{userlist.total_count}} </span>
           </div>
-          <div class="col-md-8 offset-md-2" *ngFor="let user of mArti">
+          <div class="col-md-8 offset-md-2" *ngFor="let user of mArti; let i = index;">
             <div class="card m-b-15">
               <div class="row card-content">
                 <div class="col-md-1">
@@ -40,7 +42,9 @@
                   Profile URL: <a href="{{user.html_url}}" target="_blank">{{user.html_url}}</a>
                 </div>
                 <div class="col-md-1">
-                  <div (click)="openDetail(userform)" class="detail" form="ngForm" >Details</div>
+                  <div (click)="openDetail(userform)" class="detail" form="ngForm">
+                    Details
+                  </div>
                 </div>
                 
                
@@ -48,10 +52,18 @@
              
                
                   <div *ngIf="opendetails" class="col-sm-12" >
-                    <ul *ngFor="let repo of repodetails; let i = index">
-                      <li>{{i}} - {{repo.html_url}}</li>
+                    <ul class="listings">
+                      <li *ngFor="let repo of repodetails; let i = index">
+                        {{i}} - {{repodetails[i].html_url}}
+                      </li>
                     </ul>
                   </div>
+
+
+                
+
+
+                  
                 
 
               </div>

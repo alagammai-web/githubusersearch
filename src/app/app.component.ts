@@ -31,14 +31,11 @@ export class AppComponent {
   }
 
 
-  //  this.users =  this.githubapiService.getbyUsername(userform.value.userName);
-  //  console.log("ssdsdsd", this.users);
-
 
 
   // tslint:disable-next-line: use-lifecycle-interface
   ngOnInit() {
-    // this.users = this.githubapiService.getUsers(this.userform.value.userName);
+   
   }
 
 
@@ -51,14 +48,6 @@ export class AppComponent {
       this.mArti =  users["items"];
       console.log('response is -->', this.mArti);
     });
-    // this.githubapiService.getbyUsername().subscribe(data => {
-    //   console.log('resp is', data);
-    //   });
-    // const searchings = userform.value.userName;
-    // return this.http.get('https://api.github.com/users/' + searchings + '?per_page=10').subscribe(users => {
-    //   console.log('resp is', users);
-    //   });
-
   }
 
   openDetail(userform: NgForm){
@@ -68,9 +57,7 @@ export class AppComponent {
     });
   }
 
-  namesort(){
-    alert("ipe");
-  }
+
 
 
 }

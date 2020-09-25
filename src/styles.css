@@ -75,3 +75,16 @@ select{
     text-decoration: none;
     color: black;
 }
+.listings{
+    margin: 20px auto;
+}
+.listings li{
+    list-style: none;
+    padding: 10px;
+}
+.listings li:nth-child(odd){
+    background: #eee;
+}
+.is-multiline{
+    padding: 20px 20px;
+}
